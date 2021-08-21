@@ -157,8 +157,10 @@ function Form() {
 
             <div id='show' className='hidden'>
                 <form>
+                    <div className='full-form'>
                     {renderForm()}
                     <button onClick={scrollDown} className='scroll'>Take me there</button>
+                    </div>
                     {renderLetter()}
 
                 </form>

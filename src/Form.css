@@ -1,9 +1,16 @@
+@media only screen and (max-width: 600px) {
+    body {
+        background-color:#bbc2d45d;
+    }
+  }
+
 .flex-it {
     font-family: 'Merriweather', serif;
     color: #2E2C2F;
     background-color:#bbc2d45d;
     display: flex;
     height: 100%;
+    width: 100%;
 }
 
 label {
@@ -31,6 +38,10 @@ input {
     margin: 20px;
     display:flex;
     flex-direction: column;
+}
+
+.full-form {
+    height: 100vh;
 }
 
 .table-title {
@@ -82,7 +93,7 @@ button {
     background-color: #89ABBD;
     font-weight: bold;
     font-family: 'Merriweather', serif;
-    color: #2E2C2F;
+
     border-radius: 3px;
     font-size: 15px;;
 }
