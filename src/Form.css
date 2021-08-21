@@ -4,6 +4,11 @@
     }
   }
 
+html {
+    display: flex;
+    background-color:#bbc2d45d;
+}
+
 .flex-it {
     font-family: 'Merriweather', serif;
     color: #2E2C2F;
