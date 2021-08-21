@@ -1,46 +1,35 @@
 import React, { Component } from 'react';
 
-import { render } from 'react-dom';
-
-   
-
-class App extends Component {
+class TheDate extends Component {
 
   constructor() {
+    super()
+    var today = new Date()
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
 
-   
+    const month = today.getMonth()
 
-    var today = new Date(),
+    const monthName = monthNames[month]
 
-    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
-   
+    let date = monthName + ' ' + today.getDate() + ', ' + today.getFullYear();
 
     this.state = {
-
       currentDate: date
-
     }
 
   }
+
   render() {
-
     return (
-
       <div>
-
         <p>
-
-          { this.state.currentDate }
-
+          {this.state.currentDate}
         </p>
-
       </div>
-
     );
-
   }
+}
 
-} 
-
-export default Date
+export default TheDate

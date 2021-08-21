@@ -1,12 +1,78 @@
-label {
-    padding: 4px;
+.flex-it {
+    font-family: 'Merriweather', serif;
+    background-color:#EFF2F9;
+    display: flex;
+    width: 100vw;
 }
+
+label {
+    width: 300px;
+}
+
+input {
+    padding: 12px 20px;
+    font-family: 'Merriweather', serif;
+    width: 300px;
+}
+
+.form-stuff {
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.table-title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.table {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-company {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-you {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .letter {
     margin: 5% 20%;
 }
 
-form {
-    margin: 4% 4%;
-    padding: 4px;
+.hidden {
+    display:none;
+}
+
+.butts {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 200px;
+}
+
+#button-intro{
+    flex-flow: column;
+    align-items: center;
+    margin: 200px;
+}
+
+button {
+    background-color: #89ABBD;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    color: #2E2C2F;
+    border-radius: 3px;
+}
+
+button:hover{
+    background-color: #2E2C2F;
+    color: #89ABBD;
+
 }
