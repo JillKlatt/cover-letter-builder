@@ -24,6 +24,19 @@ function Form() {
     const [relevantWork, setRelevantWork] = useState('')
     const [recentProject, setRecentProject] = useState('')
 
+    function scrollDown(e) {
+        e.preventDefault()
+        window.scrollTo({
+        top: document.body.scrollHeight,
+        bottom: 0, 
+        behavior: 'smooth'
+    }) ;
+        // let letter = document.getElementById('letter')
+        // document.onscroll = function scroll() {
+        //     letter.scrollIntoView
+        // }
+    }
+
     function handleSubmit(e) {
         console.log('submit')
         e.preventDefault();
@@ -108,7 +121,7 @@ function Form() {
 
     function renderLetter() {
         return (
-            <div class='letter'>
+            <div id='letter' class='letter'>
                 <p><TheDate /></p>
 
                 <h2>Dear Hiring Manager</h2>
@@ -141,6 +154,7 @@ function Form() {
             <div id='show' className='hidden'>
                 <form>
                     {renderForm()}
+                    <button onClick={scrollDown} className='scroll'>Take me there</button>
                     {renderLetter()}
 
                 </form>

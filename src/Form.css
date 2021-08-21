@@ -41,6 +41,10 @@ input {
     flex-direction: column;
 }
 
+.scroll {
+    scroll-behavior: smooth;
+}
+
 
 .letter {
     margin: 5% 20%;
