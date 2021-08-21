@@ -1,13 +1,24 @@
 .flex-it {
     font-family: 'Merriweather', serif;
     color: #2E2C2F;
-    background-color:#EFF2F9;
+    background-color:#bbc2d45d;
     display: flex;
     height: 100%;
 }
 
 label {
     width: 300px;
+}
+
+.header-title {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-input {
+    display: flex;
+    justify-content: space-around;
 }
 
 input {
@@ -73,6 +84,7 @@ button {
     font-family: 'Merriweather', serif;
     color: #2E2C2F;
     border-radius: 3px;
+    font-size: 15px;;
 }
 
 button:hover{

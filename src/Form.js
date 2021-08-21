@@ -7,23 +7,23 @@ import { ExternalLink } from 'react-external-link';
 
 function Form() {
 
-    const [acknowledged, setAcknowledged] = useState(false)
-
     const [name, setName] = useState('')
     const [companyName, setCompanyName] = useState('')
     const [position, setPosition] = useState('')
-    const [personalSkill1, setPersonalSkill1] = useState('')
-    const [personalSkill2, setPersonalSkill2] = useState('')
+    const [industry, setIndustry] = useState('')
+    const [recentProject, setRecentProject] = useState('')
     const [companyValue1, setCompanyValue1] = useState('')
     const [aboutValue1, setAboutValue1] = useState('')
-    const [aboutValue2, setAboutValue2] = useState('')
-    const [aboutValue3, setAboutValue3] = useState('')
     const [companyValue2, setCompanyValue2] = useState('')
+    const [aboutValue2, setAboutValue2] = useState('')
     const [companyValue3, setCompanyValue3] = useState('')
+    const [aboutValue3, setAboutValue3] = useState('')
+
+    const [personalSkill1, setPersonalSkill1] = useState('')
+    const [personalSkill2, setPersonalSkill2] = useState('')
     const [funFact, setFunFact] = useState('')
     const [relevantExperience, setRelevantExperience] = useState('')
     const [relevantWork, setRelevantWork] = useState('')
-    const [recentProject, setRecentProject] = useState('')
     const [personalAdjective1, setPersonalAdjective1] = useState('')
     const [personalAdjective2, setPersonalAdjective2] = useState('')
 
@@ -36,19 +36,9 @@ function Form() {
         });
     }
 
-    function handleSubmit(e) {
-        console.log('submit')
-        e.preventDefault();
-        return (
-            <div>
-                <Letter name={companyName} value1={companyValue1} value2={companyValue2} value3={companyValue3} fact={funFact} experience={relevantExperience} />
-            </div>
-        )
-    }
 
     function jokeIntro(e) {
         e.preventDefault()
-        setAcknowledged(true)
         let display = document.getElementById('show')
         display.classList.remove('hidden')
         let button = document.getElementById('button-intro')
@@ -58,17 +48,25 @@ function Form() {
     function renderForm() {
         return (
             <div className='form-stuff'>
-                <h2>Your Name:</h2>
-                <input type='text' value={name} onChange={e => setName(e.target.value)}></input>
+                <div className='header-title'>
+                    <h2>Your Name:</h2>
+                    <h2>Company Name:</h2>
+                    <h2>Industry:</h2>
+                </div>
+
+                <div className='header-input'>
+                    <input type='text' value={name} onChange={e => setName(e.target.value)}></input>
+                    <input type='text' value={companyName} onChange={e => setCompanyName(e.target.value)}></input>
+                    <input type='text' value={industry} onChange={e => setIndustry(e.target.value)}></input>
+                </div>
+
+<br></br>
                 <div className='table-title'>
                     <h2>About The Company:</h2>
                     <h2>About You:</h2>
                 </div>
                 <div className='table'>
                     <div className='about-company'>
-
-                        <label className='company-info'>Company Name:</label>
-                        <input type='text' value={companyName} onChange={e => setCompanyName(e.target.value)}></input>
 
                         <label className='company-info'>Position:</label>
                         <input type='text' value={position} onChange={e => setPosition(e.target.value)}></input>
@@ -112,9 +110,6 @@ function Form() {
                         <label>Relevant Company:</label>
                         <input type='text' value={relevantWork} onChange={e => setRelevantWork(e.target.value)}></input>
 
-                        <label>Personal Skill:</label>
-                        <input type='text' value={personalSkill2} onChange={e => setPersonalSkill2(e.target.value)}></input>
-
                         <label>Personal Adjective:</label>
                         <input type='text' value={personalAdjective1} onChange={e => setPersonalAdjective1(e.target.value)}></input>
 
@@ -135,13 +130,13 @@ function Form() {
                 <p>Dear Hiring Manager</p>
 
                 <p>
-                    I'm excited for the opportunity to apply for a {position} at {companyName}. I recently graduated from Flatiron School's Software Engineering Program in July and think I could bring great {personalSkill1} and {personalSkill2} {companyName}'s development team. During my time at Flatiron, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
+                    I'm excited for the opportunity to apply for a {position} position at {companyName}. I recently graduated from Flatiron School's Software Engineering Program in July and think I could bring great {personalSkill1} and {personalSkill2} to {companyName}'s development team. During my time at Flatiron, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
                 </p>
-                <p>{companyName} is revolutionizing the industry, but I especially love their recent work on {recentProject}. My {companyValue2} would be a great assesst to a similiar project because {aboutValue2}. Using my {relevantExperience} at {relevantWork}, I understand the value of {companyValue3}. There, I {aboutValue3}.</p>
+                <p>{companyName} is revolutionizing the {industry} industry, but I especially love their recent work on {recentProject}. My {companyValue2} would be a great assesst to a similiar project because {aboutValue2}. Using my {relevantExperience} at {relevantWork}, I understand the value of {companyValue3}. There, I {aboutValue3}.</p>
 
                 <p>Thank you for your time and consideration. I believe my {personalAdjective1} and {personalAdjective2} would be an excellent addition to your development team. I’m incredibly interested in the position and would love to talk more soon. I’m looking forward to the opportunity to share my potential.</p>
 
-                <h3>Hire Me!</h3>
+                <h3>Hire Me.</h3>
 
                 <p>Sincerely,</p>
                 {name}
@@ -170,8 +165,9 @@ function Form() {
 
                 <div className='footer'>
                     <p>Obviously it'll need some adjusting, but sometimes getting started is the most difficult part</p>
-                    <p>Also, this project was made for shits and giggz, the code is bad, but you can view it 
-                    <ExternalLink href='https://github.com/JillKlatt/cover-letter-builder'><span> here</span></ExternalLink>
+                    <p>Be confident! And remember that cover letters are your chance to brag about how great you are!</p>
+                    <p>Also, this project was made for shits and giggz, the code is bad, but you can view it
+                        <ExternalLink href='https://github.com/JillKlatt/cover-letter-builder'><span> here</span></ExternalLink>
                     </p>
                 </div>
             </div>
