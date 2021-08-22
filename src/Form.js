@@ -161,8 +161,9 @@ function Form() {
                     {renderForm()}
                     <button onClick={scrollDown} className='scroll'>Take me there</button>
                     </div>
+                    <div className='full-letter'>
                     {renderLetter()}
-
+                    </div>
                 </form>
 
                 <div className='footer'>
