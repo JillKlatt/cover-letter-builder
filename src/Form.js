@@ -19,6 +19,7 @@ function Form() {
     const [companyValue3, setCompanyValue3] = useState('')
     const [aboutValue3, setAboutValue3] = useState('')
 
+    const [education, setEducation] = useState('')
     const [personalSkill1, setPersonalSkill1] = useState('')
     const [personalSkill2, setPersonalSkill2] = useState('')
     const [funFact, setFunFact] = useState('')
@@ -60,7 +61,7 @@ function Form() {
                     <input type='text' value={industry} onChange={e => setIndustry(e.target.value)}></input>
                 </div>
 
-<br></br>
+                <br></br>
                 <div className='table-title'>
                     <h2>About The Company:</h2>
                     <h2>About You:</h2>
@@ -95,6 +96,10 @@ function Form() {
                     </div>
 
                     <div className='about-you'>
+
+                        <label>School Info:</label>
+                        <input type='text' value={education} onChange={e => setEducation(e.target.value)}></input>
+
                         <label>Personal Skill:</label>
                         <input type='text' value={personalSkill1} onChange={e => setPersonalSkill1(e.target.value)}></input>
 
@@ -130,7 +135,7 @@ function Form() {
                 <p>Dear Hiring Manager</p>
 
                 <p>
-                    I'm excited for the opportunity to apply for a {position} position at {companyName}. I recently graduated from Flatiron School's Software Engineering Program in July and think I could bring great {personalSkill1} and {personalSkill2} to {companyName}'s development team. During my time at Flatiron, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
+                    I'm excited for the opportunity to apply for a {position} position at {companyName}. I recently graduated from {education} and think I could bring great {personalSkill1} and {personalSkill2} to {companyName}'s development team. During my time at Flatiron, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
                 </p>
                 <p>{companyName} is revolutionizing the {industry} industry, but I especially love their recent work on {recentProject}. My {companyValue2} would be a great assesst to a similiar project because {aboutValue2}. Using my {relevantExperience} at {relevantWork}, I understand the value of {companyValue3}. There, I {aboutValue3}.</p>
 
@@ -158,19 +163,19 @@ function Form() {
             <div id='show' className='hidden'>
                 <form>
                     <div className='full-form'>
-                    {renderForm()}
-                    <button onClick={scrollDown} className='scroll'>Take me there</button>
+                        {renderForm()}
+                        <button onClick={scrollDown} className='scroll'>Take me there</button>
                     </div>
                     <div className='full-letter'>
-                    {renderLetter()}
+                        {renderLetter()}
                     </div>
                 </form>
 
                 <div className='footer'>
                     <p>Obviously it'll need some adjusting, but sometimes getting started is the most difficult part</p>
                     <p>Be confident! And remember that cover letters are your chance to brag about how great you are!</p>
-                    <p>Also, this project was made for shits and giggz, the code is bad, but you can view it
-                        <ExternalLink href='https://github.com/JillKlatt/cover-letter-builder'><span> here</span></ExternalLink>
+                    <p>Also, this project was made for shits and giggz, the code is bad, I've made better stuff:
+                        <ExternalLink href='https://jillklatt.github.io/'><span> here</span></ExternalLink>
                     </p>
                 </div>
             </div>
