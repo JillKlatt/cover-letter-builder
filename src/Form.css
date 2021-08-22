@@ -74,7 +74,6 @@ input {
     margin: 0% 46.5%;
 }
 
-
 .letter {
     margin: 5% 20%;
 }
@@ -85,7 +84,6 @@ input {
 
 .butts {
     display: flex;
-
 }
 
 #button-intro{
@@ -99,7 +97,6 @@ button {
     background-color: #89ABBD;
     font-weight: bold;
     font-family: 'Merriweather', serif;
-
     border-radius: 3px;
     font-size: 15px;;
 }
