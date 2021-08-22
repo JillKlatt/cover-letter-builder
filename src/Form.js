@@ -135,9 +135,9 @@ function Form() {
                 <p>Dear Hiring Manager</p>
 
                 <p>
-                    I'm excited for the opportunity to apply for a {position} position at {companyName}. I recently graduated from {education} and think I could bring great {personalSkill1} and {personalSkill2} to {companyName}'s development team. During my time at Flatiron, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
+                    I'm excited for the opportunity to apply for a {position} position at {companyName}. I recently graduated from {education} and think I could bring great {personalSkill1} and {personalSkill2} to {companyName}'s development team. During my time at {education}, I {funFact}. It was there I also learned my passion for {companyValue1} by {aboutValue1}.
                 </p>
-                <p>{companyName} is revolutionizing the {industry} industry, but I especially love their recent work on {recentProject}. My {companyValue2} would be a great assesst to a similiar project because {aboutValue2}. Using my {relevantExperience} at {relevantWork}, I understand the value of {companyValue3}. There, I {aboutValue3}.</p>
+                <p>{companyName} is revolutionizing the {industry} industry, but I especially love their recent work on {recentProject}. My {companyValue2} would be a great asset to a similiar project because {aboutValue2}. Using my {relevantExperience} at {relevantWork}, I understand the value of {companyValue3}. There, I {aboutValue3}.</p>
 
                 <p>Thank you for your time and consideration. I believe my {personalAdjective1} and {personalAdjective2} would be an excellent addition to your development team. I’m incredibly interested in the position and would love to talk more soon. I’m looking forward to the opportunity to share my potential.</p>
 
