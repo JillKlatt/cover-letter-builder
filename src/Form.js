@@ -156,7 +156,7 @@ function Form() {
 
             <div id='button-intro'>
                 <h1>This site is for entertainment purposes only.</h1>
-                <h2>I would never suggest that we should spend as long on our cover letters as companies do reading them.</h2>
+                <h2>I would never suggest that we should spend as long writing our cover letters as companies do reading them.</h2>
                 <button onClick={jokeIntro}>I gotcha</button>
             </div>
 
